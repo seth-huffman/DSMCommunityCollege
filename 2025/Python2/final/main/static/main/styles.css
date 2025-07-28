@@ -1,0 +1,108 @@
+/* #######################################
+# NEW CODE ADDED - START
+# Stylizing the website for consistent design patterns
+####################################### */
+body {
+    background-color: #182123;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+form {
+    background-color: white;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    font-weight: 800;
+}
+
+form input[type="text"],
+form input[type="date"],
+input::placeholder,
+form label {
+    color: #182123;
+    font-weight: 800;
+}
+
+form input[type="text"],
+form input[type="date"], form button {
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 47px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+/* ------------------------ */
+/* -------- Layout -------- */
+/* ------------------------ */
+body {
+    align-items: flex-start;
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ------------ */
+/* --- Left --- */
+/* ------------ */
+form {
+    border-radius: 8px;
+    padding: 16px 24px;
+}
+
+form button {
+    padding: 10px 18px;
+    float: right;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    padding: 8px 16px;
+}
+
+section { 
+    flex: 1; 
+}
+
+ul li { 
+    margin-bottom: 8px; 
+} 
+
+
+/* ------------ */
+/* --- Right -- */
+/* ------------ */
+img {
+    border-radius: 8px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+article {
+    margin-top: 113px;
+    max-width: 500px;
+}
+/* #######################################
+# NEW CODE ADDED - END
+####################################### */
+
+
+
+
+
+
+

@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #######################################
+    # NEW CODE ADDED - START
+    # Allows the setup of the main folder
+    #######################################
+    'main',
+    #######################################
+    # NEW CODE ADDED - END
+    #######################################
 ]
 
 MIDDLEWARE = [
