@@ -1,0 +1,62 @@
+
+############################    
+# CLASS 
+############################ 
+class user_account:
+    def __init__(self, account_owner, account_num):
+        self.account_owner = account_owner
+        self.account_num = account_num
+        self.account_balance = 0
+
+    ############################    
+    # METHODS 
+    ############################ 
+
+    # deposit: Accepts an amount
+    def deposit(self, amount):
+        if amount >= 0:
+            #adds this amount to the account_balance
+            self.account_balance += amount
+        else:
+            print("Add to balance")
+
+    # withdrawal: Accepts an amount  
+    def withdrawal(self, amount):
+        # If the withdrawal amount would cause the account to go negative, print that this transaction can't be completed and don't deduct from account_balance
+        if (amount > self.account_balance or amount <= 0):
+            print("Transaction can't be completed")
+        # Deducts this amount from the account_balance.
+        else:
+            self.account_balance -= amount
+
+    # display
+    def display(self):
+        # This method should output all information about the user_account object
+        print(f"Owner: {self.account_owner}")
+        print(f"Number: {self.account_num}")
+        print(f"Balance: ${self.account_balance}")
+
+############################    
+# OBJECTS 
+############################ 
+
+# account 1: Checking Account
+# should be a checking account (any account_owner, account_num is fine)
+account1 = user_account("Peter Parker", "12345")
+# add a balance of $400 to this account
+account1.deposit(400)
+# withdraw $250 from this account
+account1.withdrawal(250)
+# display the information about this account
+account1.display()
+
+
+# account 2: Savings Account
+# account2 should be a savings account (any account_owner, account_num is fine)
+account2 = user_account("Tony Stank", "678910")
+# add a balance of $50 to this account
+account2.deposit(50)
+# attempt to withdraw $100
+account2.withdrawal(100)
+# display the information about this account
+account2.display()

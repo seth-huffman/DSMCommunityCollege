@@ -1,0 +1,24 @@
+import unittest
+from oop import user_account
+
+class TestUserAccount(unittest.TestCase):
+
+    # Ensure that your unit tests cover these scenarios (SetUp and TearDown should be used)
+    def setUp(self):
+        self.checking.deposit(1000)
+        self.checking = user_account("Thor", "8675309")
+        self.savings = user_account("Hulk", "1800CALLNOW")
+
+    def tearDown(self):
+        del self.checking
+        del self.savings
+
+    def deposit(self):
+        self.assertEqual(self.checking.account_balance, 1000)
+
+    def incorrrect_withdrawal_(self):
+        self.savings.withdrawal(2000)
+        self.assertEqual(self.savings.account_balance, -1000)
+
+if __name__ == '__main__':
+    unittest.main()
